@@ -14,6 +14,8 @@ directories = {
     "Excel Files": [".xlsx"]
 }
 
+home = os.environ['HOME']
+
 # Create the directories using keys from the directories dictionary
 
 
