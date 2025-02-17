@@ -16,15 +16,15 @@ directories = {
 
 home = os.environ['HOME']
 # Create the directories using keys from the directories dictionary
-
+# This function will get the key is a cleaner way than using a switch statement, but should I also include moving the file into the directory in this same function?
 def handle_choice(choice):
-    match choice:
-        case ".jpg":
-            print("Create Images directory AND move file into the directory") # I'll need to handle the directory already existing
-        case _:
-            print("Error")
+    for k, v in directories.items():
+        if choice in v:
+            key = k
+            break
+    return key
 
-handle_choice(".jpg")
+print(handle_choice(".csv"))
 
 # Scan the files and move them to the associated directory
 
